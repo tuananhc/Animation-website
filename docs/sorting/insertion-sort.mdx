@@ -1,0 +1,57 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Insertion Sort
+
+Insertion Sort is a simple sorting algorithm that builds the final sorted list one item at a time.  
+It is similar to the way people often sort playing cards in their hands:  
+you take one card at a time and insert it into the correct position among the already sorted cards.
+
+## Steps
+
+1. Start from the second element (the first element is already considered sorted).
+2. Compare the current element with the elements in the sorted portion.
+3. Shift elements in the sorted portion one position to the right until the correct location for the current element is found.
+4. Insert the current element at that position.
+5. Repeat until all elements are sorted.
+
+## Characteristics
+
+- **Time Complexity**:  
+  - Worst case: \(O(n^2)\)  
+  - Best case: \(O(n)\) (when the list is already sorted)  
+- **Space Complexity**: \(O(1)\) (in-place sorting)  
+- **Stable**: Yes (keeps equal elements in the same relative order).  
+- **Adaptive**: Performs better if the list is partially sorted.  
+
+---
+
+<Tabs>
+  <TabItem value="code" label="Code" default>
+    ## Python Example
+
+    ```python
+    def insertion_sort(arr):
+        for i in range(1, len(arr)):
+            key = arr[i]   # The element to insert
+            j = i - 1
+            
+            # Move elements greater than key to one position ahead
+            while j >= 0 and arr[j] > key:
+                arr[j + 1] = arr[j]
+                j -= 1
+            
+            # Insert the key into the correct location
+            arr[j + 1] = key
+        
+        return arr
+    ```
+  </TabItem>
+  <TabItem value="vis" label="Visualized">
+    This is an orange 🍊
+  </TabItem>
+</Tabs>
