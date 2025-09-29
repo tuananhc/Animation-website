@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Selection Sort
+
+Selection Sort is a simple comparison-based sorting algorithm.  
+It works by repeatedly finding the minimum element from the unsorted part of the list  
+and swapping it with the first unsorted element.  
+
+### Steps:
+1. Divide the list into two parts: sorted and unsorted.
+2. Find the minimum element from the unsorted part.
+3. Swap it with the first unsorted element.
+4. Expand the sorted part by one element.
+5. Repeat until the entire list is sorted.
+
+### Characteristics
+- **Time Complexity**:  
+  - Worst case: \(O(n^2)\)  
+  - Best case: \(O(n^2)\)  
+  - Average case: \(O(n^2)\)  
+- **Space Complexity**: \(O(1)\) (in-place sorting)  
+- **Stable**: No (equal elements may be swapped out of original order).  
+- **Simple**: Easy to implement but inefficient for large datasets.  
+
+---
+
+<Tabs>
+  <TabItem value="code" label="Code" default>
+    ## Python Example
+
+    ```python
+    def insertion_sort(arr):
+        n = len(arr)
+        return arr
+    ```
+  </TabItem>
+  <TabItem value="vis" label="Visualized">
+    Video goes here
+  </TabItem>
+</Tabs>
